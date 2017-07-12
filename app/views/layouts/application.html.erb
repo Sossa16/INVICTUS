@@ -21,10 +21,10 @@
                     </div>
                 </div>
                 <div class="medium-8 large-8 columns">
-                    <ul class="vertical menu align-center", id="menu">
-                        <li><span class="fa fa-futbol-o" aria-hidden="true"></span><%=link_to "Quienes somos"%></li>
-                        <li><span class="fa fa-pencil-square-o" aria-hidden="true"></span><%=link_to "Registrar", :class => "menu"%></li>
-                        <li><span class="fa fa-users" aria-hidden="true"></span><%=link_to "Equipos", :class => "menu"%></li>
+                    <ul class="vertical menu", id="menu">
+                        <li><%=link_to "Quienes somos", {:controller => :index, :action =>:home}, {:class=>"fa fa-futbol-o"} %></li>
+                        <li><%=link_to "Registrar", {:controller => :index, :action =>:home}, {:class=>"fa fa-pencil-square-o"}%></li>
+                        <li><%=link_to "Equipos", {:controller => :index, :action =>:home}, {:class=>"fa fa-users"}%></li>
                     </ul>
                 </div>
             </div>
