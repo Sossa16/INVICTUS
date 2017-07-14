@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  get 'teams/new'
+  post "teams" => "teams#create"
+  get "teams/:id" => "teams#show"
   get 'index/home'
   root to: 'index#home'
 
