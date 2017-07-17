@@ -37,6 +37,7 @@ gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
 
 gem 'bundle', '~> 0.0.1'
 gem 'rake', '~> 12.0'
+gem 'railties', '~> 5.0', '>= 5.0.0.1'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
 
-  get 'teams/new'
-  post "teams" => "teams#create"
-  get "teams/:id" => "teams#show"
-  get 'index/home'
-  root to: 'index#home'
+  resources :teams 
+  #get 'teams/new'
+  #get "teams" => "teams#index" #mostrar todos
+  #post "teams" => "teams#create" #crear
+  #get "teams/:id" => "teams#show" #mostrar el reciente
+  root to: 'layouts#home'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

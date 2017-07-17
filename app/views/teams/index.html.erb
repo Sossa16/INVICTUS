@@ -1,0 +1,11 @@
+<h1>Listing teams</h1>
+<% @team.each do |team| %>
+  <p>
+    <strong>Team name:</strong>
+    <%= team.team_name %>
+  </p>
+  <p>
+    <strong>Description:</strong>
+    <%= team.description %>
+  </p>   
+<% end %>
