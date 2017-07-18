@@ -22,6 +22,9 @@ class TeamsController < ApplicationController
 		@team = Team.new
 	end
 
+	def home
+	end
+
 	
 
 	private
