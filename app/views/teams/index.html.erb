@@ -7,5 +7,9 @@
   <p>
     <strong>Description:</strong>
     <%= team.description %>
-  </p>   
+  </p> 
+  <%= link_to 'Show', team_path(@team) %>
+  <%= link_to 'Edit', edit_team_path(@team) %>
+  <%= link_to 'delete', {:action => :destroy, :id =>team.id }, method: :delete,
+              data: { confirm: '¿Are you sure?' } %>  
 <% end %>

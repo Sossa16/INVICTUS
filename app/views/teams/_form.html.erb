@@ -1,0 +1,28 @@
+<%= form_for @team do |f| %>
+
+  <% if @team.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@team.errors.count, "error") %> han impedido que el artículo sea grabado:
+      </h2>
+      <ul>
+        <% @team.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <p>
+    <%= f.label :Team_Name %><br>
+    <%= f.text_field :team_name %>
+  </p>
+
+  <p>
+    <%= f.label :Description %><br>
+    <%= f.text_area :description %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
