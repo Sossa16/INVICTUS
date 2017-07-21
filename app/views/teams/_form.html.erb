@@ -1,5 +1,4 @@
 <%= form_for @team do |f| %>
-
   <% if @team.errors.any? %>
     <div id="error_explanation">
       <h2>
@@ -12,17 +11,19 @@
       </ul>
     </div>
   <% end %>
-  <p>
-    <%= f.label :Team_Name %><br>
-    <%= f.text_field :team_name %>
-  </p>
-
-  <p>
-    <%= f.label :Description %><br>
-    <%= f.text_area :description %>
-  </p>
-
-  <p>
-    <%= f.submit %>
-  </p>
+  <div class="form">
+    <p>
+      <%= f.label :Team_Name %>
+      <%= f.text_field :team_name %>
+    </p>
+     <p>
+      <%= f.label :Description %>
+      <%= f.text_area :description, :class => "text_area" %>
+    </p>
+  </div>
+  <div class="btn">
+    <p>
+      <%= f.submit %>
+    </p>
+  </div>
 <% end %>

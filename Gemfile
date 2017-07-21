@@ -34,6 +34,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'foundation-rails', '~> 6.4', '>= 6.4.1.0'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
+gem 'paperclip', '~> 5.1'
 
 gem 'bundle', '~> 0.0.1'
 gem 'rake', '~> 12.0'

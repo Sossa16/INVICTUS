@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <title><%= content_for?(:title) ? yield(:title) : "INVICTUS" %></title>
-
+        <link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One|Patua+One" rel="stylesheet">
         <%= stylesheet_link_tag    "application" %>
         <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
         <%= csrf_meta_tags %>
@@ -17,14 +17,14 @@
                 <div class="medium-4 large-4 columns">
                     <div class="wrapper">
                         <%= image_tag "soccer.png", :alt => "invictus", :id => "logo" %>
-                        <h1>invictus</h1>
+                        <h1 id="logo-title">invictus</h1>
                     </div>
                 </div>
                 <div class="medium-8 large-8 columns">
                     <ul class="vertical menu", id="menu">
-                        <li><%=link_to "About us", {:controller => :teams, :action =>:home}, {:class=>"fa fa-futbol-o"} %></li>
-                        <li><%=link_to "Check in", {:controller => :teams, :action =>:new}, {:class=>"fa fa-pencil-square-o"}%></li>
-                        <li><%=link_to "Teams", {:controller => :teams, :action =>:index}, {:class=>"fa fa-users"}%></li>
+                        <li class="li-header"><%=link_to "About us", {:controller => :teams, :action =>:home}, {:class=>"fa fa-futbol-o"} %></li>
+                        <li class="li-header"><%=link_to "Check in", {:controller => :teams, :action =>:new}, {:class=>"fa fa-pencil-square-o"}%></li>
+                        <li class="li-header"><%=link_to "Teams", {:controller => :teams, :action =>:index}, {:class=>"fa fa-users"}%></li>
                     </ul>
                 </div>
             </div>
