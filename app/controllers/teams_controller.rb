@@ -26,7 +26,7 @@ class TeamsController < ApplicationController
 		if @team.save
 			redirect_to :action => :show, :id => @team.id
 		else
-			render "new"
+			render 'new'
 		end		
 	end
 
@@ -56,7 +56,7 @@ class TeamsController < ApplicationController
 
 	private
 		def team_params
-			params.require(:team).permit(:team_name, :description)
+			params.require(:team).permit(:team_name,:description,:cover)
 		end	
 
 

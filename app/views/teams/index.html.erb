@@ -1,15 +1,17 @@
-<h1>Listing teams</h1>
-<% @team.each do |team| %>
-  <p>
-    <strong>Team name:</strong>
-    <%= team.team_name %>
-  </p>
-  <p>
-    <strong>Description:</strong>
-    <%= team.description %>
-  </p> 
-  <%= link_to 'Show', team_path(@team) %>
-  <%= link_to 'Edit', edit_team_path(@team) %>
-  <%= link_to 'delete', {:action => :destroy, :id =>team.id }, method: :delete,
-              data: { confirm: '¿Are you sure?' } %>  
-<% end %>
+<div class="field">
+  <h1>Listing teams</h1>
+  <% @team.each do |team| %>
+    <p>
+      <strong>Team name:</strong>
+      <%= team.team_name %>
+    </p>
+    <p>
+      <strong>Description:</strong>
+      <%= team.description %>
+    </p> 
+    <%= link_to 'Show', team_path(@team) %>
+    <%= link_to 'Edit', edit_team_path(@team) %>
+    <%= link_to 'delete', {:action => :destroy, :id =>team.id }, method: :delete,
+                data: { confirm: '¿Are you sure?' } %>  
+  <% end %>
+</div>

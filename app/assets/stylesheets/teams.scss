@@ -1,12 +1,24 @@
 /* Place all the styles related to the teams controller here.
 // They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/ */
+// You can use Sass (SCSS) here: http://sass-lang.com/*/
+/*
+ *= require_tree 	
+ *= require_self
+ *= require foundation_and_overrides
+ *= require font-awesome
+ */ 
 
-.form{
+
+
+.field{
 	display: block;
 	margin: auto;
 	max-width: 800px;
 	width: 90%;
+}
+
+h1{
+	font-family: 'Patua One', cursive;
 }
 
 label{
@@ -15,4 +27,17 @@ label{
 
 .text_area{
 	height:100px;
+}
+
+.form_control{
+	border:none;
+	border-bottom: 1px solid #89939E;
+	outline: none;
+}
+
+.btn{
+	background-color: #000;
+	border-radius: 10%;
+	color: #00bbeb;
+	padding: 5px 16px;
 }

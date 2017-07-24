@@ -2,7 +2,7 @@
   <% if @team.errors.any? %>
     <div id="error_explanation">
       <h2>
-        <%= pluralize(@team.errors.count, "error") %> han impedido que el artículo sea grabado:
+        <%= pluralize(@team.errors.count, "error") %> impide que el equipo sea grabado:
       </h2>
       <ul>
         <% @team.errors.full_messages.each do |msg| %>
@@ -11,19 +11,21 @@
       </ul>
     </div>
   <% end %>
-  <div class="form">
     <p>
       <%= f.label :Team_Name %>
-      <%= f.text_field :team_name %>
+      <%= f.text_field :team_name, :class => "form_control" %>
     </p>
      <p>
       <%= f.label :Description %>
-      <%= f.text_area :description, :class => "text_area" %>
+      <%= f.text_area :description, :class => "form_control text_area" %>
     </p>
-  </div>
-  <div class="btn">
     <p>
-      <%= f.submit %>
+      <% if @team.cover? %>
+        <%= image_tag @team.cover.url() %>
+      <% end %>
+      <%=f.file_field :cover%>
     </p>
-  </div>
+    <p>
+      <%= f.submit "save", :class =>"btn"%>
+    </p>
 <% end %>
