@@ -1,20 +1,10 @@
-/* Place all the styles related to the teams controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/*/
-/*
- *= require_tree 	
- *= require_self
- *= require foundation_and_overrides
- *= require font-awesome
- */ 
-
-
-
 .field{
 	display: block;
 	margin: auto;
 	max-width: 800px;
 	width: 90%;
+	background-color: #F5F5F5;
+	padding: 1.5em;
 }
 
 h1{
@@ -39,5 +29,20 @@ label{
 	background-color: #000;
 	border-radius: 10%;
 	color: #00bbeb;
-	padding: 5px 16px;
+	padding: 5px 16px
+}
+
+.bnt-center{
+	text-align: center;
+}
+
+.option{
+	color:#000;
+	margin: 0.3125em;
+}
+
+@media all and (min-width: 700px){
+	h1{
+		text-align: center;
+	}
 }
